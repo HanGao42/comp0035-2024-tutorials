@@ -34,32 +34,32 @@ if __name__ == '__main__':
     sql_artist_2 = 'INSERT INTO artist VALUES (2, "Robert Plant");'
     sql_track_1 = 'INSERT INTO track VALUES (1, "Killing the blues",2);'
 
-    # Handle the SQLite error if the query fails
-    # Run it an you should get an error
-    # Run again but add # before the table_track_error line and remove # from the line below
-    try:
-        cursor.execute(sql_table_artist)
-        cursor.execute(sql_table_track_error)
-        # cursor.execute(sql_table_track)
-    except sqlite3.Error as e:
-        print(f"An error occurred: {e}")
-    connection.commit()
+    # # Handle the SQLite error if the query fails
+    # # Run it an you should get an error
+    # # Run again but add # before the table_track_error line and remove # from the line below
+    # try:
+    #     cursor.execute(sql_table_artist)
+    #     cursor.execute(sql_table_track_error)
+    #     # cursor.execute(sql_table_track)
+    # except sqlite3.Error as e:
+    #     print(f"An error occurred: {e}")
+    # connection.commit()
 
-    # This should fail as the relationship is violated
-    # Run again but remove the # from the second artist insert statement
-    try:
-        cursor.execute(sql_artist_1)
-        # cursor.execute(sql_artist_2)
-        cursor.execute(sql_track_1)
-        connection.commit()
-    except sqlite3.Error as e:
-        print(f"An error occurred: {e}")
+    # # This should fail as the relationship is violated
+    # # Run again but remove the # from the second artist insert statement
+    # try:
+    #     cursor.execute(sql_artist_1)
+    #     # cursor.execute(sql_artist_2)
+    #     cursor.execute(sql_track_1)
+    #     connection.commit()
+    # except sqlite3.Error as e:
+    #     print(f"An error occurred: {e}")
 
-    # As above but using the context manager
-    try:
-        with connection:
-            cursor.execute(sql_artist_1)
-            # cursor.execute(sql_artist_2)
-            cursor.execute(sql_track_1)
-    except sqlite3.Error as e:
-        print(f"An error occurred: {e}")
+    # # As above but using the context manager
+    # try:
+    #     with connection:
+    #         cursor.execute(sql_artist_1)
+    #         # cursor.execute(sql_artist_2)
+    #         cursor.execute(sql_track_1)
+    # except sqlite3.Error as e:
+    #     print(f"An error occurred: {e}")
