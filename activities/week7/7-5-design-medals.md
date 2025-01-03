@@ -1,5 +1,8 @@
 # 5. Draw the application design for the paralympics prediction web app
 
+This is an optional activity to give you the opportunity to apply the application design techniques with less
+instruction.
+
 ## Project overview
 
 |                 | Paralympics prediction app                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -91,3 +94,5 @@ Refer to activities 1 to 4 to help you.
 3. Combine the classes and review for duplicates.
 4. Draw the class diagram. Add the classes. Draw the relationships between the classes.
 5. Review the diagram against the design principles. Make changes if required.
+
+[Next activity](7-6-genAI.md)
